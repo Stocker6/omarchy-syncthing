@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "lee.syncthing",
+  "name": "Syncthing",
+  "version": "1.0.0",
+  "author": "lee",
+  "license": "MIT",
+  "description": "Syncthing folder/device status, pause/resume, rescan, and web GUI access in the Omarchy bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Syncthing",
+    "description": "Watch sync status, pause or resume Syncthing, rescan folders, and open the web GUI.",
+    "category": "Files",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 10
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 5,
+        "max": 3600,
+        "step": 5,
+        "defaultValue": 10
+      }
+    ]
+  }
+}
